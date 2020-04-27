@@ -1,0 +1,6 @@
+/build/
+/config/
+/dist/
+/*.js
+/src/page/message/*
+/src/utils/user.js

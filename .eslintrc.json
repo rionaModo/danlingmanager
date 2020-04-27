@@ -1,0 +1,41 @@
+{
+    "root": true,
+    "parserOptions": {
+      "parser": "babel-eslint",
+      "ecmaVersion": 2018,
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "sourceType": "module"
+    },
+  
+    "env": {
+      "browser": "true",
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential", 
+      "standard"
+    ],
+    "plugins": [
+      "vue"
+    ],
+  
+    "globals": {
+      "document": false,
+      "navigator": false,
+      "window": false 
+    },
+  
+    "rules": {
+      "generator-star-spacing": "off",
+      "no-debugger": "warn",
+      "no-trailing-spaces": "off",
+      "semi":["error", "always", { "omitLastInOneLineBlock": true}],
+      "no-extra-semi": "error",
+      "no-spaced-func": "error",
+      "prefer-promise-reject-errors": "off",
+      "no-undef": "error"
+    }
+  }
