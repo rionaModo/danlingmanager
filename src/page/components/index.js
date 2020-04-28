@@ -1,7 +1,11 @@
 import pageTitle from './pageTitle';
+import searchContainer from './searchContainer';
+import mainContainer from './mainContainer';
 // 注册全局组件
 const components = [
-  pageTitle
+  pageTitle,
+  searchContainer,
+  mainContainer
 ];
 const componentsName = [];
 export default {

@@ -11,15 +11,20 @@ const children = [
   },
   {
     path: 'activitymanage/list',
-    name: 'activitymanage',
+    name: 'activitymanageList',
     meta: { title: `活动管理` },
     component: () => import(/* webpackChunkName: "salaryCenter" */ '@/page/activitymanage/list')
+  },
+  {
+    path: 'activitymanage/add',
+    name: 'activitymanageAdd',
+    meta: { title: `活动管理` },
+    component: () => import(/* webpackChunkName: "salaryCenter" */ '@/page/activitymanage/add')
   }
 ];
 const routes = [
   {
     path: '/',
-    name: 'Frame',
     meta: { title: `首页` },
     component: Frame, 
     children: children

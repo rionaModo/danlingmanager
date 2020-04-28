@@ -1,9 +1,26 @@
 <template>
     <div class="saray">
-      <page-title :breadcrumb="['活动管理']">
-        <el-button type="primary" size="medium" icon="el-icon-plus">添加活动</el-button>
-      </page-title>
-      <el-card class="box-content">
+      <dl-page-title :breadcrumb="['活动管理']">
+        <el-button type="primary" size="medium" icon="el-icon-plus" @click="activityOpxMediator('new')">添加活动</el-button>
+      </dl-page-title>
+      <dl-search-container>
+        <el-form ref="form" :model="form" label-width="120px">
+          <el-row>
+            <el-col :span="6">
+              <el-form-item label="活动名称：">
+                  <el-input
+                    placeholder="请输入活动名称">
+                  </el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="12" :offset="2">
+              <el-button type="primary" @click="onSubmit">查询</el-button>
+              <el-button type="primary" @click="onSubmit">导出</el-button>
+            </el-col>
+          </el-row>
+        </el-form>
+      </dl-search-container>
+      <dl-main-container>
         <div class="content-table">
           <el-table
             :data="listData.data"
@@ -64,7 +81,7 @@
             :total="listData.total">
           </el-pagination>
         </div>
-      </el-card>
+      </dl-main-container>
     </div>
 </template>
 <script>
@@ -91,6 +108,17 @@ export default {
     onSubmit () {
       this.form.page = 1;
       this.getData();
+    },
+    activityOpxMediator (type, id) { // 关于活动的操作
+      switch (type) {
+        case 'new': // 活动新增
+          this.goCreateActivity();
+          break;
+        case 'edit':
+      }
+    },
+    goCreateActivity () {
+      this.$router.push({path: '/activitymanage/add'});
     },
     getData () {
       let params = JSON.parse(JSON.stringify(this.form));

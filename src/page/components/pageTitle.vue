@@ -14,7 +14,7 @@
 <script>
 import router from '@/router';
 export default {
-  name: 'pageTitle',
+  name: 'dlPageTitle',
   props: {
     breadcrumb: {
       type: Array,

@@ -41,7 +41,7 @@
 <script>
 import dHeader from '@/page/components/header.vue';
 import { mapGetters } from 'vuex';
-import router from '@/router';
+// import router from '@/router';
 export default {
   name: 'Frame',
   components: {
@@ -83,7 +83,7 @@ export default {
       console.log('handleClose', key, keyPath);
     },
     handleSelect (key, keyPath) {
-      router.push({path: key});
+      this.$router.push({path: key});
     }
   }
 };
