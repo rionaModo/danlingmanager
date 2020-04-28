@@ -34,7 +34,7 @@
             <el-row>
               <el-col :span="7" :offset="2">
                 <el-form-item label="活动预计耗时:">
-                  <el-input-number v-model="num" controls-position="right"  :min="1"></el-input-number>小时
+                  <el-input-number placeholder="请输入活动预计耗时"  v-model="num" controls-position="right"  :min="1"></el-input-number>小时
                 </el-form-item>
               </el-col>
             </el-row>
